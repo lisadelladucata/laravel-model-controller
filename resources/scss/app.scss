@@ -1,0 +1,54 @@
+$primary-color: #2c3e50;
+$accent-color: #e74c3c;
+$bg-color: #f4f4f4;
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: darken($primary-color, 10%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-left: 5px solid $accent-color;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-top: 0;
+        color: $primary-color;
+    }
+}
